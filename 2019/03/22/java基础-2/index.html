@@ -79,13 +79,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="小澈的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1.～代表按位取反 2.创建线程对象两种方式：(1.继承Thread类，重载run方法；(2.实现Runnable接口，实现run方法  3.使用反射可以看出子类是继承了父类的私有方法的(不管是否是final)，只是直接调用父类的私有方法是不可以的，但是利用反射的方式可以调用。字段同理。 4.虽然说在Java8可以在接口中定义静态方法了（此处定义指的是含body的实现），但是不能只声明，只声明的会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础(2)">
+<meta property="og:url" content="http://yoursite.com/2019/03/22/java基础-2/index.html">
 <meta property="og:site_name" content="小澈的博客">
+<meta property="og:description" content="1.～代表按位取反 2.创建线程对象两种方式：(1.继承Thread类，重载run方法；(2.实现Runnable接口，实现run方法  3.使用反射可以看出子类是继承了父类的私有方法的(不管是否是final)，只是直接调用父类的私有方法是不可以的，但是利用反射的方式可以调用。字段同理。 4.虽然说在Java8可以在接口中定义静态方法了（此处定义指的是含body的实现），但是不能只声明，只声明的会">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190128235611460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNDMwNjc2,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-03-22T09:32:16.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小澈的博客">
+<meta name="twitter:title" content="java基础(2)">
+<meta name="twitter:description" content="1.～代表按位取反 2.创建线程对象两种方式：(1.继承Thread类，重载run方法；(2.实现Runnable接口，实现run方法  3.使用反射可以看出子类是继承了父类的私有方法的(不管是否是final)，只是直接调用父类的私有方法是不可以的，但是利用反射的方式可以调用。字段同理。 4.虽然说在Java8可以在接口中定义静态方法了（此处定义指的是含body的实现），但是不能只声明，只声明的会">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190128235611460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNDMwNjc2,size_16,color_FFFFFF,t_70">
 
 
 
@@ -115,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/22/java基础-2/">
 
 
 
 
 
-  <title>小澈的博客</title>
+  <title>java基础(2) | 小澈的博客</title>
   
 
 
@@ -140,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,172 +219,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/22/java基础-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiantian">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小澈的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/22/java基础-3/" itemprop="url">java基础(3)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-22T17:33:35+08:00">
-                2019-03-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>1.<br>用import 导入你想要访问的包或类 然后实例化对象就可以访问了<br>必须指出的是 你要访问的类必须是public的类 而且类里的属性也必须是public或者private，但提供了公共的get/set方法</p>
-<p>2.<br>toString() 返回该对象的字符串表示；<br>java object默认的基本方法中没有copy()，含有如下方法：<br>getClass(), hashCode(), equals(), clone(), toString(), notify(), notifyAll(),  wait(), finalize()</p>
-<p>3.<br>Java中的四类八种基本数据类型<br>第一类：整数类型  byte short int long<br>第二类：浮点型  float double<br>第三类：逻辑型    boolean(它只有两个值可取true false)</p>
-<p>第四类：字符型  char</p>
-<p>4.<br>java中java.lang包的内容是都不需要导入的,其它必须导入。 2、java中底层加载的时候就用java.lang,因为省资源。</p>
-<p>5.<br>Math.floor()  （向下取整，即取比自己小的）,floor地板的意思，就是返回小的值 </p>
-<p>Math.ceil()返回类型都是double （向上取整，即取比自己大的数）,ceil天花板的意思，就是返回大的值</p>
-<p>Math.round()返回类型是long（四舍五入）：一个接收float类型返回int类型，另一个接收double类型返回long类型，这也很好理解，float和int都是占4个字节，double和long占8个字节，这样精度就没有丢失。round 四舍五入，float时返回int值，double时返回long值 </p>
-<p>调用这个Math.Random()函数能够返回带正号的double值，该值大于等于0.0且小于1.0，即取值范围是[0.0,1.0)的左闭右开区间，返回值是一个伪随机选择的数，在该范围内（近似）均匀分布。</p>
-<p>6.<br>(1.静态内部类：</p>
-<pre><code>1. 静态内部类本身可以访问外部的静态资源，包括静态私有资源。但是不能访问非静态资源，可以不依赖外部类实例而实例化。
-</code></pre><p>(2.成员内部类：</p>
-<pre><code>1. 成员内部类本身可以访问外部的所有资源，但是自身不能定义静态资源，因为其实例化本身就还依赖着外部类。
-</code></pre><p>(3.局部内部类：</p>
-<pre><code>1. 局部内部类就像一个局部方法，不能被访问修饰符修饰，也不能被static修饰。
-2. 局部内部类只能访问所在代码块或者方法中被定义为final的局部变量。
-</code></pre><p>(4.匿名内部类：</p>
-<pre><code>1. 没有类名的内部类，不能使用class，extends和implements，没有构造方法。
-2. 多用于GUI中的事件处理。
-3. 不能定义静态资源
-4. 只能创建一个匿名内部类实例。
-5. 一个匿名内部类一定是在new后面的，这个匿名类必须继承一个父类或者实现一个接口。
-6. 匿名内部类是局部内部类的特殊形式，所以局部内部类的所有限制对匿名内部类也有效。
-7.
-在异常处理中，若try中的代码可能产生多种异常则可以对应多个catch语句，若catch中的参数类型有父类子类关系，此时应该将父类放在后面，子类放在前面。
-如果将父类放在前面的话，异常将被父类完全捕获，子类永远不能捕获异常
-8.
-自动转换按从低到高的顺序转换。不同类型数据间的优先关系如下： 
-</code></pre><p>byte short char int long float double 1 2 2 4 8 4 8 低到高自动转换，高到底强制转换</p>
-<p>7.<br>java字符采用的是统一码（Unicode），它是一种16位编码方案，支持世界不同语言的文本交换，处理，和显示。Unicode占两个字节，用char表示。另外一种常用编码方案是ASCII，占一个字节。提一下，java中也可以使用ASCII字符。存储不同长度的东西java会用不同的存储长度来提高存储利用率。</p>
-<p>8.<br>类中声明的变量有默认初始值；方法中声明的变量没有默认初始值，必须在定义时初始化，否则在访问该变量时会出错。<br>boolean类型默认值是false</p>
-<p>9.<br>赋值是语句<br>类体里面只能出现变量和方法,不能出现语句</p>
-<p>10.<br>new关键词初始化，无论是否为局部变量，都有初始值。</p>
-<p>11.<br>Math.pow(2,n); 计算出来的数是一个double 型的数。</p>
-<p>12.<br>package语句必须作为源文件的第一条非注释性语句，一个源文件只能指定一个包，只能包含一条package语句</p>
-<p>13.<br>C，StringBuilder跟StringBuffer功能相同，区别是StringBuilder不是线程安全的<br>D，StringBuilder和StringBuffer底层都是以字符数组存放的，可以修改内容</p>
-<p>14.<br>泛型仅仅是java的语法糖，它不会影响java虚拟机生成的汇编代码，在编译阶段，虚拟机就会把泛型的类型擦除，还原成没有泛型的代码，顶多编译速度稍微慢一些，执行速度是完全没有什么区别的.</p>
-<p>15.<br>instance是java的二元运算符，用来判断他左边的对象是否为右面类（接口，抽象类，父类）的实例</p>
-<p>16.<br>链接：<a href="https://www.nowcoder.com/questionTerminal/5ce602538d784f51a531bf9760592773" target="_blank" rel="noopener">https://www.nowcoder.com/questionTerminal/5ce602538d784f51a531bf9760592773</a><br>来源：牛客网</p>
-<p>知识点:i=i++ 都知道 i++ 是先赋值再自增 其实这样理解的话不够全面是无法理解i=i++为什么会是0的。<br>真正的解释是<br>(1) i=0;初始值<br>(2) i=i+1;i=1 i++的结果<br>(3)i++ 由于是返回的自增前的值 所以 i=i++ = i=0;<br>所以我觉得之前的对i++的表述是有问题的 应该说 i++返回的是自增前的值，而不是说先赋值后自增，这种表述带有实际执行顺序的意思但其实并非如此。</p>
-<ol start="17">
-<li>Spring框架中bean中id和name的唯一区别就是id不能包含特殊字符，而name能包含特殊字符。</li>
-</ol>
-<p>18.<br><img src="https://img-blog.csdnimg.cn/20190222210512356.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNDMwNjc2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -409,9 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/22/java基础-2/" itemprop="url">java基础(2)</a></h1>
+          <h1 class="post-title" itemprop="name headline">java基础(2)</h1>
         
 
         <div class="post-meta">
@@ -461,9 +301,7 @@
       
 
       
-        
-          
-            <p>1.<br>～代表按位取反</p>
+        <p>1.<br>～代表按位取反</p>
 <p>2.<br>创建线程对象两种方式：<br>(1.继承Thread类，重载run方法；<br>(2.实现Runnable接口，实现run方法 </p>
 <p>3.<br>使用反射可以看出子类是继承了父类的私有方法的(不管是否是final)，只是直接调用父类的私有方法是不可以的，但是利用反射的方式可以调用。字段同理。</p>
 <p>4.<br>虽然说在Java8可以在接口中定义静态方法了（此处定义指的是含body的实现），但是不能只声明，只声明的会被编译器识别为抽象方法，而抽象方法不能用static修饰 </p>
@@ -487,8 +325,6 @@
 <p>20.<br>A，Vector相当于一个线程安全的List<br>B，HashMap是非线程安全的，其对应的线程安全类是HashTable<br>C，Arraylist是非线程安全的，其对应的线程安全类是Vector<br>D，StringBuffer是线程安全的，相当于一个线程安全的StringBuilder<br>E，Properties实现了Map接口，是线程安全的</p>
 <p>21.<br>静态变量又称为类变量，跟类联系在一起，只能定义在类里，不能定义在方法中，即便是静态方法也不行，只能在静态方法中被使用。</p>
 
-          
-        
       
     </div>
     
@@ -505,172 +341,32 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/22/java基础-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiantian">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小澈的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/22/java基础-1/" itemprop="url">java基础(1)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-22T16:53:17+08:00">
-                2019-03-22
-              </time>
+              <a href="/2019/03/22/java基础-1/" rel="next" title="java基础(1)">
+                <i class="fa fa-chevron-left"></i> java基础(1)
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2019/03/22/java基础-3/" rel="prev" title="java基础(3)">
+                java基础(3) <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <ol>
-<li><p>当实例化子类对象时，首先要加载父类的class文件进内存，静态代码块是随着类的创建而执行，所以父类静态代码块最先被执行，子类class文件再被加载，同理静态代码块被先执行；实例化子类对象要先调用父类的构造方法，而调用父类构造方法前会先执行父类的非静态代码块</p>
-</li>
-<li><p>子类从其父类继承所有成员（字段，方法和嵌套类）。 构造函数不是成员，所以它们不被子类继承，但是可以从子类调用超类的构造函数。</p>
-</li>
-<li><p>多种混合计算时，自动将所有数据类型转换为容量最大的一种数据类型。所以都转为float类型。如：100%3.0=1.0</p>
-</li>
-<li><p>this不能在static的方法中使用~</p>
-</li>
-<li><p>算法包括0个或多个输入，1个或多个输出，中间有穷个处理过程。<br>存储结构不属于算法结构</p>
-</li>
-<li><p>在同一个java原文件中，可以有多个class类，但是只有有一个公共的 public class</p>
-</li>
-<li><p>list 存放的元素可重复， set 不可以。 map 使用的是键值对存放，可一对多，key不重复，value可重复</p>
-</li>
-<li><p>释放掉占据的内存空间是由gc完成，但是程序员无法明确强制其运行，该空间在不被引用的时候不一定会立即被释放，这取决于GC本身，无法由程序员通过代码控制。</p>
-</li>
-<li><p>注意：区分编码和编码格式<br>编码： 编码就是一个编号(数字)到字符的一种映射关系，就仅仅是一种一对一的映射而已，可以理解成一个很大的对应表格<br>java默认的字符集是Unicode（占两个字节byte，一个字节=8比特位bit，所以每个Unicode占用16比特位）<br>编码格式：编码格式 是用来序列化或存储编码中提到的那个“编号(数字)”的一种“格式”，包括gbk和utf-8<br>gbk： 是指中国的中文字符，其它它包含了简体中文与繁体中文字符<br>UTF-8： 它是一种全国家通过的一种编码</p>
-</li>
-<li><p>suspend() 和 resume() 方法：两个方法配套使用，suspend()使得线程进入阻塞状态，并且不会自动恢复，必须其对应的 resume() 被调用，才能使得线程重新进入可执行状态</p>
-</li>
-<li><p>在源码中 toLowerCase 是重新 new String()</p>
-</li>
-<li><p>java的基本编程单元是类，基本存储单元是变量。</p>
-</li>
-<li><p>java多态有两种情况：重载和覆写<br>在覆写中，运用的是动态单分配，是根据new的类型确定对象，从而确定调用的方法；<br>在重载中，运用的是静态多分派，即根据静态类型确定对象，因此不是根据new的类型确定调用的方法</p>
-</li>
-<li><p>并不是静态块最先初始化,而是静态域.(BM：啊!多么痛的领悟!)<br>而静态域中包含静态变量、静态块和静态方法,其中需要初始化的是静态变量和静态块.而他们两个的初始化顺序是靠他们俩的位置决定的!<br>So！<br>初始化顺序是 t1 t2 静态块</p>
-</li>
-<li><p>public可以被当前类，子类，包，其他包，访问，<br>protected 可以被当前类，子类，包访问<br>default可以被可以被当前类，包内访问；<br>private只能被当前类访问</p>
-</li>
-</ol>
-<p>16.<br>（1.加载JDBC驱动程序：<br>（2.提供JDBC连接的URL<br>（3.创建数据库的连接<br>（4.创建一个Statement<br>（5.执行SQL语句<br>（6.处理结果<br>（7.关闭JDBC对象 </p>
-<p>17.<br>（1.HashMap,TreeMap 未进行同步考虑，是线程不安全的。<br>（2.HashTable 和 ConcurrentHashMap 都是线程安全的。区别在于他们对加锁的范围不同，HashTable 对整张Hash表进行加锁，而ConcurrentHashMap将Hash表分为16桶(segment)，每次只对需要的桶进行加锁。<br>（3.Collections 类提供了synchronizedXxx()方法，可以将指定的集合包装成线程同步的集合。比如，<br>List  list = Collections.synchronizedList(new ArrayList());<br>Set  set = Collections.synchronizedSet(new HashSet());</p>
-<p>18.<br>静态成员分为静态属性和静态方法，而静态成员是不可以被继承的，因为静态成员是依附于类存在的，它属于类；静态方法在被子类“继承”（实际可以理解为声明了一个跟父类同名的静态方法）后，如果子类将该方法进行了重写，在实例化对象时，如果是子类对象则调用的是子类中该方法的实现方式，如果是父类对象则调用父类中该方法的实现方式。是一种对父类中静态方法的隐藏，但是父类的静态方法一直存在，不会像非静态方法那样，一但发生子类将父类方法重写，不管是子类对象还是父类对象调用该方法都是子类的实现方式；<br>另一方面，如果子类中静态方法是继承自父类的话，应该是可以用重写@Override进行标记重写的，但在java中不允许在子类中与父类同名同参的静态成员前使用该注解，这也说明了子类中的静态方法不是继承自父类，而是一种声明；<br>另外所有父类中的非静态成员都可以被子类继承,private等成员访问控制符,只限定子类是否可以调用该成员,不限定是否可以被继承</p>
-<p>19.<br>static修饰的方法：<br>（1.父类中的静态方法可以被继承、但不能被子类重写。</p>
-<p>（2.如果在子类中写一个和父类中一样的静态方法，那么该静态方法由该子类特有，两者不构成重写关系。</p>
-<p>final修饰：<br>（1.修饰类表示不允许被继承。</p>
-<p>（2.修饰方法表示不允许被子类重写，但是可以被子类继承，不能修饰构造方法。</p>
-<p>（3.修饰变量表示不允许被修改<br>a）方法内部的局部变量，使用前被赋值即可（只能赋值一次），没有必要非得初始化。<br>b）类中的成员变量（如果没有在定义时候初始化，那么只能在构造代码块中或者构造方法中赋值）<br>c）基本数据类型的变量（初始化赋值之后不能更改）<br>d）引用数据类型的变量（初始化之后不能再指向另外一个对象，但对象的内容是可以变的）</p>
-<p>20.<br>final可以被继承，不能被重写；<br>static可以被继承，但是会被隐藏，子类也可以写和父类private方法相同名字的方法，但不是重写，是两个不同方法。；<br>private方法可以被继承，子类也可以写和父类private方法相同名字的方法，但不是重写，是两个不同方法。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -680,10 +376,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -691,6 +388,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -894,6 +595,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
