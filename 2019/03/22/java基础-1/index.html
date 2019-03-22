@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="小澈的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="当实例化子类对象时，首先要加载父类的class文件进内存，静态代码块是随着类的创建而执行，所以父类静态代码块最先被执行，子类class文件再被加载，同理静态代码块被先执行；实例化子类对象要先调用父类的构造方法，而调用父类构造方法前会先执行父类的非静态代码块  子类从其父类继承所有成员（字段，方法和嵌套类）。 构造函数不是成员，所以它们不被子类继承，但是可以从子类调用超类的构造函数。  多种混合计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础(1)">
+<meta property="og:url" content="http://yoursite.com/2019/03/22/java基础-1/index.html">
 <meta property="og:site_name" content="小澈的博客">
+<meta property="og:description" content="当实例化子类对象时，首先要加载父类的class文件进内存，静态代码块是随着类的创建而执行，所以父类静态代码块最先被执行，子类class文件再被加载，同理静态代码块被先执行；实例化子类对象要先调用父类的构造方法，而调用父类构造方法前会先执行父类的非静态代码块  子类从其父类继承所有成员（字段，方法和嵌套类）。 构造函数不是成员，所以它们不被子类继承，但是可以从子类调用超类的构造函数。  多种混合计">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-22T09:09:08.412Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小澈的博客">
+<meta name="twitter:title" content="java基础(1)">
+<meta name="twitter:description" content="当实例化子类对象时，首先要加载父类的class文件进内存，静态代码块是随着类的创建而执行，所以父类静态代码块最先被执行，子类class文件再被加载，同理静态代码块被先执行；实例化子类对象要先调用父类的构造方法，而调用父类构造方法前会先执行父类的非静态代码块  子类从其父类继承所有成员（字段，方法和嵌套类）。 构造函数不是成员，所以它们不被子类继承，但是可以从子类调用超类的构造函数。  多种混合计">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/22/java基础-1/">
 
 
 
 
 
-  <title>小澈的博客</title>
+  <title>java基础(1) | 小澈的博客</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/22/java基础-1/" itemprop="url">java基础(1)</a></h1>
+          <h1 class="post-title" itemprop="name headline">java基础(1)</h1>
         
 
         <div class="post-meta">
@@ -298,9 +299,7 @@
       
 
       
-        
-          
-            <ol>
+        <ol>
 <li><p>当实例化子类对象时，首先要加载父类的class文件进内存，静态代码块是随着类的创建而执行，所以父类静态代码块最先被执行，子类class文件再被加载，同理静态代码块被先执行；实例化子类对象要先调用父类的构造方法，而调用父类构造方法前会先执行父类的非静态代码块</p>
 </li>
 <li><p>子类从其父类继承所有成员（字段，方法和嵌套类）。 构造函数不是成员，所以它们不被子类继承，但是可以从子类调用超类的构造函数。</p>
@@ -342,8 +341,6 @@
 <p>3.修饰变量表示不允许被修改<br>a）方法内部的局部变量，使用前被赋值即可（只能赋值一次），没有必要非得初始化。<br>b）类中的成员变量（如果没有在定义时候初始化，那么只能在构造代码块中或者构造方法中赋值）<br>c）基本数据类型的变量（初始化赋值之后不能更改）<br>d）引用数据类型的变量（初始化之后不能再指向另外一个对象，但对象的内容是可以变的）</p>
 <p>20.<br>final可以被继承，不能被重写；<br>static可以被继承，但是会被隐藏，子类也可以写和父类private方法相同名字的方法，但不是重写，是两个不同方法。；<br>private方法可以被继承，子类也可以写和父类private方法相同名字的方法，但不是重写，是两个不同方法。</p>
 
-          
-        
       
     </div>
     
@@ -360,12 +357,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -375,10 +372,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -386,6 +384,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -589,6 +591,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
